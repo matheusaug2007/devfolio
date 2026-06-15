@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Portfólio de Matheus Lopes - Desenvolvedor Web. Site criado para o trabalho da faculdade utilizando HTML, CSS, Javascript e Bootstrap." />
+  <title>Matheus Dev</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="imagens/favicon.webp" />
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome para Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Bootstrap 5 CSS Offline -->
+  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css" />
+
+  <!-- Estilos Personalizados Externos -->
+  <link rel="stylesheet" href="assets/css/style.css?v=1.1" />
+</head>
+
+<body>
+
+  <!-- ─── HEADER / NAV (Bootstrap Navbar) ─── -->
+  <header id="header" class="fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light bg-white py-3 shadow-sm">
+      <div class="container">
+        <a class="navbar-brand logo" href="#home">Matheus<span>.</span>dev</a>
+        
+        <!-- Botão Hambúrguer Oficial do Bootstrap -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Links de Navegação -->
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav gap-2 mt-3 mt-md-0">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projetos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contato</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ─── HERO SECTION ─── -->
+    <section class="hero" id="home">
+      <!-- Restabelecida a classe .hero-container do seu CSS para manter a responsividade original -->
+      <div class="hero-container container">
+        <!-- Conteúdo do Hero -->
+        <div class="hero-content text-start">
+          <div class="badge-status">
+            <span class="pulse-dot"></span>
+            Disponível para novos projetos
+          </div>
+          <h1>Um pouco de mim e muito <span>código</span>.</h1>
+          <p class="hero-desc">Desenvolvedor Web criando projetos com foco em excelência e performance. Fazendo aquilo
+            que precisa ser feito.</p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary text-light text-decoration-none">Fale Comigo! <i class="fas fa-arrow-right"></i></a>
+            <a href="#projects" class="btn btn-secondary text-decoration-none">Ver Projetos</a>
+          </div>
+        </div>
+
+        <!-- Terminal de Código Falando Sobre Mim -->
+        <div class="hero-visual">
+          <div class="terminal-container">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">matheus.json</span>
+            </div>
+            <div class="terminal-body">
+              <span class="line-number">1</span><span class="code-key">"nome"</span>: <span class="code-val">"Matheus Augusto"</span>,<br>
+              <span class="line-number">2</span><span class="code-key">"skills"</span>: [<span class="code-val">"HTML"</span>, <span class="code-val">"CSS"</span>, <span class="code-val">"JS"</span>, <span class="code-val">"Bootstrap"</span>],<br>
+              <span class="line-number">3</span><span class="code-key">"alvo"</span>: <span class="code-val">"Excelência"</span>,<br>
+              <span class="line-number">4</span><span class="code-key">"status"</span>: <span class="code-val">"Disponível"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SOBRE MIM ─── -->
+    <section class="about" id="about">
+      <!-- Restabelecida a classe .about-grid do seu CSS para manter a responsividade original -->
+      <div class="about-grid container">
+        <!-- Coluna dos textos (esquerda no desktop / primeiro no mobile) -->
+        <div class="about-text">
+          <span class="section-label">Sobre mim</span>
+          <h3>Quem é o Matheus?</h3>
+          <p>Olá! Sou o Matheus Augusto, estudante de Análise e Desenvolvimento de Sistemas na Unicesumar e
+            desenvolvedor web freelancer. Minha missão é traduzir as necessidades do seu negócio em interfaces
+            bonitas, rápidas e que transmitam profissionalismo.</p>
+          <p>Trabalho focando na experiência do usuário, confiabilidade, usabilidade e uma navegação fenomenal. Cada
+            projeto é único e desenvolvido de acordo com as necessidades do cliente, garantindo que ele tenha um site
+            que atenda às suas expectativas.</p>
+
+          <h4 class="skills-title">Tecnologias principais</h4>
+          <div class="skills-flex d-flex flex-wrap gap-2">
+            <span class="skill-badge">HTML5</span>
+            <span class="skill-badge">CSS3</span>
+            <span class="skill-badge">JavaScript</span>
+            <span class="skill-badge">Bootstrap 5</span>
+            <span class="skill-badge">PHP</span>
+            <span class="skill-badge">SQL</span>
+          </div>
+        </div>
+
+        <!-- Coluna da Foto com Moldura Minimalista (direita no desktop / segundo no mobile) -->
+        <div class="about-photo-container">
+          <div class="about-photo-frame">
+            <img src="imagens/foto_matheus.jpeg" alt="Matheus Lopes" class="about-photo" />
+            <div class="about-photo-glow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SEÇÃO PROJETOS ─── -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-header text-start mb-5">
+          <span class="section-label">Portfólio</span>
+          <h2 class="section-title">Projetos Recentes</h2>
+        </div>
+        
+        <!-- Restabelecida a classe .projects-grid do seu CSS para manter a responsividade original -->
+        <div class="projects-grid">
+          <!-- Card Projeto 1: Senna Tech -->
+          <div class="project-card d-flex flex-column">
+            <div class="project-thumb">
+              <img src="imagens/foto-sennatech.png" alt="Preview Senna X1" class="project-img">
+              <div class="thumb-glow"></div>
+            </div>
+            <div class="project-body d-flex flex-column flex-grow-1">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge bg-primary-light text-primary border border-primary-subtle py-1.5 px-3">JavaScript</span>
+                <span class="badge bg-primary-light text-primary border border-primary-subtle py-1.5 px-3">HTML5</span>
+                <span class="badge bg-primary-light text-primary border border-primary-subtle py-1.5 px-3">CSS3</span>
+              </div>
+              <h3 class="project-title">Senna Tech</h3>
+              <p class="project-desc">Dashboard dinâmico integrado com biometria e IA para monitoramento de capacetes
+                inteligentes em tempo real (Projeto Universitário).</p>
+              <div class="project-actions mt-auto d-flex gap-3">
+                <a href="https://sennatechcassiano.netlify.app" target="_blank" class="btn btn-primary btn-sm flex-grow-1 text-light py-2 justify-content-center text-center">
+                  Acessar site <i class="fas fa-external-link-alt ms-1"></i>
+                </a>
+                <a href="https://github.com/matheusaug2007" target="_blank" class="btn btn-secondary btn-sm flex-grow-1 py-2 justify-content-center text-center text-decoration-none">
+                  Ver GitHub <i class="fab fa-github ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Projeto 2: Sites Seguros -->
+          <div class="project-card d-flex flex-column">
+            <div class="project-thumb">
+              <img src="imagens/foto-site-seguro.png" alt="Preview Sites Seguros" class="project-img">
+              <div class="thumb-glow"></div>
+            </div>
+            <div class="project-body d-flex flex-column flex-grow-1">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="badge bg-primary-light text-primary border border-primary-subtle py-1.5 px-3">JavaScript</span>
+                <span class="badge bg-primary-light text-primary border border-primary-subtle py-1.5 px-3">HTML5</span>
+                <span class="badge bg-primary-light text-primary border border-primary-subtle py-1.5 px-3">CSS3</span>
+              </div>
+              <h3 class="project-title">Sites Seguros</h3>
+              <p class="project-desc">Website educacional interativo criado para conscientização de usuários sobre
+                segurança e prevenção de golpes virtuais.</p>
+              <div class="project-actions mt-auto d-flex gap-3">
+                <a href="https://identificacaodesitesseguros.netlify.app/" target="_blank" class="btn btn-primary btn-sm flex-grow-1 text-light py-2 justify-content-center text-center">
+                  Acessar site <i class="fas fa-external-link-alt ms-1"></i>
+                </a>
+                <a href="https://github.com/matheusaug2007" target="_blank" class="btn btn-secondary btn-sm flex-grow-1 py-2 justify-content-center text-center text-decoration-none">
+                  Ver GitHub <i class="fab fa-github ms-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SEÇÃO CONTATO ─── -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-wrap-v2 py-5 px-4 px-md-5">
+          <div class="row g-5">
+            <!-- Formulário de Contato Bootstrap (Esquerda no desktop / Primeiro no mobile) -->
+            <div class="col-lg-7">
+              <div class="p-4 rounded-4 shadow-sm border contact-form-container" style="background-color: var(--bg-primary); border-color: var(--border) !important;">
+                <h4 class="mb-3 fw-bold text-start">Envie uma mensagem</h4>
+                <p class="text-secondary text-start mb-4 fs-7">Preencha o formulário abaixo e conversaremos no WhatsApp instantaneamente com os seus dados pré-preenchidos.</p>
+                
+                <form id="contactForm" class="contact-form-bootstrap">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control bg-transparent text-reset border-secondary-subtle" id="contactName" placeholder="Seu nome completo" required>
+                    <label for="contactName" class="text-secondary">Seu nome completo</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="email" class="form-control bg-transparent text-reset border-secondary-subtle" id="contactEmail" placeholder="Seu e-mail" required>
+                    <label for="contactEmail" class="text-secondary">Seu e-mail</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control bg-transparent text-reset border-secondary-subtle" id="contactSubject" placeholder="Assunto da conversa" required>
+                    <label for="contactSubject" class="text-secondary">Assunto da conversa</label>
+                  </div>
+                  <div class="form-floating mb-4">
+                    <textarea class="form-control bg-transparent text-reset border-secondary-subtle" placeholder="Sua mensagem" id="contactMessage" style="height: 130px; resize: none;" required></textarea>
+                    <label for="contactMessage" class="text-secondary">Sua mensagem ou descrição do projeto</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100 py-3 text-light d-flex align-items-center justify-content-center gap-2">
+                    Enviar para o WhatsApp <i class="fab fa-whatsapp fs-5"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <!-- Informações de Contato (Direita no desktop / Segundo no mobile) -->
+            <div class="col-lg-5 text-start d-flex flex-column justify-content-center">
+              <span class="section-label">Contato</span>
+              <h2 class="mb-4">Vamos construir algo juntos?</h2>
+              <p class="contact-pitch mb-4">Estou disponível para novos projetos freelancer. Se você precisa de um site
+                exclusivo, rápido e otimizado que passe autoridade, entre em contato comigo enviando uma mensagem no formulário ou através de um dos meus canais de contato directos.</p>
+              
+              <!-- Grade de Canais de Contato -->
+              <div class="d-flex flex-column gap-3 mb-4">
+                <a href="https://wa.me/5544999071031?text=Olá,%20Matheus!%20Gostaria%20de%20saber%20mais%20sobre%20seus%20serviços%20de%20desenvolvimento%20de%20sites." 
+                   target="_blank" class="d-flex align-items-center gap-3 text-decoration-none py-2 contact-direct-item">
+                  <div class="contact-icon-wrapper d-flex align-items-center justify-content-center bg-primary-light text-primary rounded-circle" style="width: 48px; height: 48px;">
+                    <i class="fab fa-whatsapp fs-5"></i>
+                  </div>
+                  <div>
+                    <span class="d-block text-secondary fs-7">WhatsApp</span>
+                    <strong class="text-primary-hover">+55 (44) 99907-1031</strong>
+                  </div>
+                </a>
+
+                <a href="mailto:matheus.augusto5117@gmail.com" class="d-flex align-items-center gap-3 text-decoration-none py-2 contact-direct-item">
+                  <div class="contact-icon-wrapper d-flex align-items-center justify-content-center bg-primary-light text-primary rounded-circle" style="width: 48px; height: 48px;">
+                    <i class="far fa-envelope fs-5"></i>
+                  </div>
+                  <div>
+                    <span class="d-block text-secondary fs-7">E-mail</span>
+                    <strong class="text-primary-hover">matheus.augusto5117@gmail.com</strong>
+                  </div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/matheus-augusto-lopes-201a08351" target="_blank" class="d-flex align-items-center gap-3 text-decoration-none py-2 contact-direct-item">
+                  <div class="contact-icon-wrapper d-flex align-items-center justify-content-center bg-primary-light text-primary rounded-circle" style="width: 48px; height: 48px;">
+                    <i class="fab fa-linkedin-in fs-5"></i>
+                  </div>
+                  <div>
+                    <span class="d-block text-secondary fs-7">LinkedIn</span>
+                    <strong class="text-primary-hover">in/matheus-augusto-lopes</strong>
+                  </div>
+                </a>
+
+                <a href="https://github.com/matheusaug2007" target="_blank" class="d-flex align-items-center gap-3 text-decoration-none py-2 contact-direct-item">
+                  <div class="contact-icon-wrapper d-flex align-items-center justify-content-center bg-primary-light text-primary rounded-circle" style="width: 48px; height: 48px;">
+                    <i class="fab fa-github fs-5"></i>
+                  </div>
+                  <div>
+                    <span class="d-block text-secondary fs-7">GitHub</span>
+                    <strong class="text-primary-hover">github.com/matheusaug2007</strong>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-bottom text-center">
+        <a href="#home" class="logo justify-content-center mb-2">Matheus<span>.</span>dev</a>
+        <p class="mb-1">Desenvolvido com foco em performance e design.</p>
+        <p class="mb-0">&copy; 2026 <strong>Matheus Lopes</strong>. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante de WhatsApp -->
+  <a href="https://wa.me/5544999071031?text=Olá,%20Matheus!%20Gostaria%20de%20fazer%20um%20orçamento." target="_blank"
+    class="whatsapp-float text-decoration-none text-light d-flex align-items-center justify-content-center" aria-label="Conversar no WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap 5 Bundle JS Offline -->
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js" defer></script>
+
+  <!-- Script de Interações Externo -->
+  <script src="assets/js/script.js?v=1.1" defer></script>
+</body>
+
+</html>
