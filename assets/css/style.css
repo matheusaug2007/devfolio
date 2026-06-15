@@ -1000,16 +1000,60 @@ footer {
   font-size: 1.8rem;
 }
 
+/* ─── CANAIS DE CONTATO DIRETO ─── */
+.contact-direct-item {
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background-color: var(--bg-primary);
+  transition: var(--transition);
+}
+
+.contact-direct-item:hover {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+  transform: translateX(4px);
+}
+
+.contact-icon-wrapper {
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px;
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: var(--primary-light) !important;
+  color: var(--primary) !important;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.bg-primary-light {
+  background-color: var(--primary-light) !important;
+}
+
+.text-primary-hover {
+  color: var(--text-primary);
+  transition: var(--transition);
+}
+
+.contact-direct-item:hover .text-primary-hover {
+  color: var(--primary);
+}
+
+.contact-direct-item span.text-secondary {
+  font-size: 0.8rem;
+}
+
+.contact-direct-item strong {
+  font-size: 0.95rem;
+}
+
 /* ─── RESPONSIVIDADE (MEDIA QUERIES) ─── */
+
+/* === TABLET (até 992px) === */
 @media (max-width: 992px) {
-  header {
-    padding: 20px 5%;
-  }
-
-  header.scrolled {
-    padding: 14px 5%;
-  }
-
   section {
     padding: 80px 5%;
   }
@@ -1017,13 +1061,37 @@ footer {
   .hero {
     padding: 120px 5% 60px;
   }
+
+  .about-grid {
+    gap: 40px;
+  }
+
+  .about-photo-frame {
+    max-width: 300px;
+  }
+
+  .contact-wrap-v2 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 
+/* === MOBILE (até 768px) === */
 @media (max-width: 768px) {
+  section {
+    padding: 60px 4%;
+  }
+
+  /* Hero: empilha texto + terminal em 1 coluna */
+  .hero {
+    padding: 100px 5% 50px;
+    min-height: auto;
+  }
+
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 40px;
+    gap: 32px;
   }
 
   .hero-content {
@@ -1033,12 +1101,15 @@ footer {
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 2.4rem;
+    letter-spacing: -1px;
   }
 
   .hero-desc {
+    font-size: 1rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 28px;
   }
 
   .hero-actions {
@@ -1051,185 +1122,167 @@ footer {
     justify-content: center;
   }
 
+  .terminal-container {
+    max-width: 320px;
+    font-size: 0.88rem;
+  }
+
+  /* About: empilha texto + foto em 1 coluna */
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 28px;
+    text-align: center;
   }
 
-  .construction-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+  .about-photo-frame {
+    max-width: 220px;
+    margin: 0 auto;
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-  nav {
-    margin: 0;
+  .about-photo-container {
+    margin-bottom: 0;
   }
 
-  .menu-toggle {
-    display: flex;
+  .about-text h3 {
+    font-size: 1.8rem;
   }
 
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    height: 100vh;
-    width: 80%;
-    max-width: 300px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-left: 1px solid var(--glass-border);
-    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
-    flex-direction: column;
-    padding: 100px 32px;
-    gap: 20px;
-    transition: var(--transition);
-    z-index: 999;
+  .about-text p {
+    font-size: 0.95rem;
   }
 
-  .nav-links.active {
-    right: 0;
+  /* Skills badges menores */
+  .skills-flex {
+    justify-content: center;
   }
 
-  .nav-links li {
-    width: 100%;
+  .skill-badge {
+    padding: 6px 14px;
+    font-size: 0.8rem;
   }
 
-  .nav-links a {
-    font-size: 1.15rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    border-radius: var(--radius-md);
-    transition: var(--transition);
-  }
-
-  .nav-links a:hover {
-    background-color: var(--primary-light);
-    color: var(--primary);
-    transform: translateX(5px);
-  }
-
-  .menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(6px, 6px);
-  }
-
-  .menu-toggle.active span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-
+  /* Projetos: 1 coluna empilhada */
   .projects-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
 
-  .footer-top {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  .project-thumb {
+    height: 180px;
   }
 
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
+  .project-body {
+    padding: 20px;
   }
 
-  .cta-list-clean {
-    align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Espaçamentos mais compactos em celulares menores */
-  section {
-    padding: 60px 5%;
+  .project-title {
+    font-size: 1.1rem;
   }
 
-  .hero {
-    padding: 110px 5% 40px;
-  }
-
-  /* Título Hero menor para não quebrar feio */
-  .hero h1 {
-    font-size: 2.1rem;
-    letter-spacing: -1px;
-  }
-
-  .hero-desc {
-    font-size: 1.05rem;
-    margin-bottom: 28px;
-  }
-
-  .badge-status {
-    padding: 6px 14px;
-    font-size: 0.75rem;
+  .project-desc {
+    font-size: 0.88rem;
     margin-bottom: 16px;
   }
 
-  /* Títulos de seção menores */
-  .section-title {
-    font-size: 1.8rem;
-  }
-
-  .about-text h3 {
-    font-size: 1.6rem;
-  }
-
-  /* Foto de perfil responsiva */
-  .about-photo-frame {
-    max-width: 160px;
-  }
-
-  .about-photo-container {
-    margin-bottom: 12px;
+  /* Contato: ajuste de espaçamentos */
+  .contact-wrap-v2 {
+    padding: 2rem 0.5rem !important;
   }
 
   .contact-wrap-v2 h2 {
     font-size: 1.8rem;
   }
 
-  .cta-content-v2 h2 {
-    font-size: 1.8rem;
+  .contact-pitch {
+    font-size: 0.95rem;
   }
 
-  /* Terminal Mockup adaptado para mobile */
+  /* Botões menores no mobile */
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+
+  /* Footer mais compacto */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-container {
+    padding: 40px 5% 20px;
+  }
+
+  /* Botão flutuante do WhatsApp menor */
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-float i {
+    font-size: 1.5rem;
+  }
+}
+
+/* === CELULARES PEQUENOS (até 480px) === */
+@media (max-width: 480px) {
+  section {
+    padding: 50px 4%;
+  }
+
+  .hero {
+    padding: 90px 4% 36px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-desc {
+    font-size: 0.92rem;
+    margin-bottom: 24px;
+  }
+
+  .badge-status {
+    padding: 5px 12px;
+    font-size: 0.72rem;
+    margin-bottom: 14px;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.45rem;
+  }
+
+  .about-photo-frame {
+    max-width: 160px;
+  }
+
   .terminal-container {
-    max-width: 290px;
-    font-size: 0.85rem;
-  }
-  .terminal-header {
-    padding: 8px 12px;
-  }
-  .terminal-body {
-    padding: 16px;
+    max-width: 260px;
+    font-size: 0.8rem;
   }
 
-  /* Grid de Projetos Mobile */
-  .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .terminal-header {
+    padding: 8px 10px;
+  }
+
+  .terminal-body {
+    padding: 14px;
   }
 
   .project-thumb {
-    height: 160px;
+    height: 150px;
   }
 
   .project-body {
-    padding: 12px;
+    padding: 14px;
   }
 
   .project-title {
@@ -1238,44 +1291,22 @@ footer {
   }
 
   .project-desc {
-    font-size: 0.78rem;
+    font-size: 0.8rem;
     line-height: 1.4;
     margin-bottom: 12px;
   }
 
-  .project-link {
-    font-size: 0.78rem;
-  }
-
-  /* Correção na grade de contatos para telas pequenas */
-  .contact-links-grid-v2 {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    padding-top: 30px;
-    max-width: 320px;
-  }
-
-  .contact-link-item-v2 {
-    min-height: 64px;
-    padding: 12px;
-    border-radius: var(--radius-sm);
-  }
-
-  .contact-link-item-v2 i {
-    font-size: 1.25rem;
-  }
-
-  /* Diminuir paddings de botões no mobile para caberem melhor lado a lado */
   .btn {
-    padding: 12px 24px;
-    font-size: 0.9rem;
+    padding: 10px 20px;
+    font-size: 0.85rem;
   }
 
-  .contact-main-btn {
-    padding: 14px 28px;
-    font-size: 0.95rem;
-    margin-bottom: 40px;
-    width: 100%;
-    justify-content: center;
+  .contact-wrap-v2 h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Canais de contato em coluna */
+  .contact-direct-item strong {
+    font-size: 0.82rem;
   }
 }
